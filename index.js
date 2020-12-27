@@ -1,12 +1,11 @@
 window.onload = () => {
     document.querySelector(".arrow-right").addEventListener("click", clickRight);
     document.querySelector(".arrow-left").addEventListener("click", clickLeft);
-    document
-      .querySelector(".send-button")
-      .addEventListener("click", showNotification);
+    document.querySelector(".send-button").addEventListener("click", showNotification);
     document.querySelectorAll(".project").forEach(element => {
       element.addEventListener("click", e => openModal(e));
     });
+    
     document.body.addEventListener("click", e => closeModal(e));
   };
   

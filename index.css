@@ -47,11 +47,12 @@ html {
     --verde: #7ac943;
   }
   
-  body {
+  body, header, section {
     align-items: center;
     background-color: var(--gris-medio);
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   
   .header {
@@ -67,9 +68,10 @@ html {
     font-size: 24px;
   }
   
+
+  
   .header-img {
-    background-image: url(./assets/images/Mina.jpeg);
-    background-size: cover;
+    object-fit: cover;
     border-radius: 50%;
     border: 1px solid var(--gris-oscuro);
     box-shadow: 8px 16px 32px 0px var(--shadow);
@@ -78,13 +80,23 @@ html {
     width: 300px;
   }
   
+  nav {
+    width: 100%;
+   
+  }
+
   .navigation {
     color: var(--blanco);
     cursor: pointer;
     display: flex;
     justify-content: space-around;
-    margin: 24px 0;
+    margin: 24px auto;
     width: 50%;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color : var(--blanco)
   }
   
   .nav-item {
@@ -102,8 +114,9 @@ html {
   }
   
   .intro {
+    color: var(--blanco);
     font-size:  1.5rem;
-    margin: 0 250px;
+    margin: 30px 250px 0;
     font-family: var(--secondary-font);
   }
   
@@ -122,23 +135,34 @@ html {
     align-items: center;
     display: flex;
     margin: 48px 0 64px;
+    justify-content: center;
+    width: 100%;
   }
   
   .window {
     overflow: hidden;
-    width: 805px;
+    width: 45%;
+    margin: 0 30px;
   }
   
   .project-container {
     left: 0;
     position: relative;
-    width: 1500px;
+    white-space: nowrap;
   }
-  
+  .project-container li {
+    display: inline-block;
+    margin: 20px 0;
+  }
+  .project-container li button{
+    border: none;
+    background: none;
+  }
+
   .project {
     border-radius: 5px;
     border: 2px solid #000;
-    display: inline-block;
+    object-fit: cover;
     height: 400px;
     margin: 0 8px;
     transition: all 0.2s ease-in-out;
@@ -150,26 +174,7 @@ html {
     transform: scale(1.1);
   }
   
-  .project1 {
-    background: center / cover no-repeat url(./assets/images/project1.png);
-  }
-  
-  .project2 {
-    background: center / cover no-repeat url(./assets/images/project2.png);
-  }
-  
-  .project3 {
-    background: center / cover no-repeat url(./assets/images/project3.png);
-  }
-  
-  .project4 {
-    background: center / cover no-repeat url(./assets/images/project4.png);
-  }
-  
-  .project5 {
-    background: center / cover no-repeat url(./assets/images/project5.png);
-  }
-  
+
   .arrow {
     height: 75px;
     transition: all 0.2s ease-in-out;
@@ -181,15 +186,13 @@ html {
   }
   
   .arrow-left {
-    background: center / contain no-repeat url(./assets/icons/play-button-left.png);
-    background-size: 73px;
+    border: 3px var(--verde) solid;
     background-color: var(--verde);
     border-radius: 50%;
   }
   
   .arrow-right {
-      background: center / contain no-repeat url(./assets/icons/play-button-right.png);
-      background-size: 73px;
+    border: 3px var(--verde) solid;
     background-color: var(--verde);
     border-radius: 50%;
   }
@@ -208,9 +211,15 @@ html {
     width: 30%;
   }
   
+  .message-input{
+    color: var(--blanco);
+    margin: 10px 0;
+  }
+
   .message-input input {
     height: 150px;
     margin-bottom: 16px;
+    
   }
   
   input {
@@ -230,6 +239,8 @@ html {
     margin-bottom: 48px;
     width: 150px;
     margin-left: auto;
+    border: none;
+    font-size:  1.5rem;
   }
   
   .notification {
