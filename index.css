@@ -187,16 +187,16 @@ html {
   }
   
   .window {
+
     overflow: hidden;
+    scroll-behavior: smooth;
     width: 45%;
     margin: 0 30px;
   }
   
   .project-container {
-    left: 0;
-    position: relative;
+    
     white-space: nowrap;
-    padding: 100px 30px;
   }
   .project-container li {
     display: inline-block;
@@ -207,7 +207,7 @@ html {
     background: none;
   }
 
-  .project {
+  .project-img {
     border-radius: 5px;
     border: 2px solid #000;
     object-fit: cover;
@@ -238,10 +238,10 @@ html {
     transition: all 0.2s ease-in-out;
   }
 
-  .arrowBtns:focus-within{
+  .arrowBtns:focus{
     transform: scale(1.1);
     outline: 2px var(--verde) solid;
-    padding: 7px;
+  
   }
   .arrowBtns:hover{
     transform: scale(1.2);
@@ -257,12 +257,20 @@ html {
     border: 3px var(--verde) solid;
     background-color: var(--verde);
     border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .arrow-right {
     border: 3px var(--verde) solid;
     background-color: var(--verde);
     border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .contact-section {
@@ -300,14 +308,11 @@ html {
   }
   
   .send-button {
-    align-items: center;
     background-color: #459c3f;
     border-radius: 5px;
     color: white;
     font-family: var(--secondary-font);
-    display: flex;
     height: 50px;
-    justify-content: center;
     margin-bottom: 48px;
     width: 150px;
     margin-left: auto;
@@ -359,10 +364,22 @@ html {
   }
   
   .modal-project-image {
-    background: center / cover no-repeat url(./assets/images/project1.png);
     border-radius: 5px;
     border: 2px solid #000;
     height: 400px;
     margin: 16px;
     width: 550px;
+  }
+
+  .modal-button {
+    background-color: #459c3f;
+    border-radius: 5px;
+    color: white;
+    font-family: var(--secondary-font);
+    height: 50px;
+    margin: 10px 20px 48px auto;
+    width: 150px;
+    outline: 2px var(--verde) solid;
+    border: none;
+    font-size:  1.5rem;
   }

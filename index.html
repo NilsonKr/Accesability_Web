@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>My Portfolio</title>
+    <title>Some Shit</title>
     <link href="./index.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap"
@@ -30,10 +30,13 @@
       <section>
         <h2 class="header"> About Me</h2>
         <p class="intro">
-          Hey! I'm Nilson Diaz , I'm Colombian and deep lover of programming and the cats
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed incidunt ea voluptas aut veritatis dignissimos necessitatibus architecto quisquam! Sapiente, aspernatur perferendis asperiores et alias incidunt laudantium ea. Explicabo, doloribus esse?
+          Error, corrupti magni cupiditate iste voluptatem neque, earum et vitae quod mollitia harum maiores temporibus. Laudantium maxime doloribus vel suscipit animi culpa incidunt aspernatur architecto, quia nam ipsam accusamus nemo!
+          Sapiente explicabo ipsam perspiciatis quasi, dolores doloremque nesciunt sed inventore velit fuga aut fugiat, officia culpa harum voluptas aliquid quod nam porro provident ex unde, iure excepturi quos! Rem, enim?
+         <!--  Hey! I'm Nilson Diaz , I'm Colombian and deep lover of programming and the cats
           too 😻 I'm Systems engineer graduated of the university , I'm Full Stack Web Developer
           Here you will be able to watch some of my projects , If you got another question or a great idea
-          send me Message in the Contact section ,Thank you and never Stop learn :3 !!
+          send me Message in the Contact section ,Thank you and never Stop learn :3 !! -->
         </p>
         <ul class="social-media">
           <li>
@@ -65,17 +68,17 @@
   
       <section>
       <div class="carousel">
-        <button class="arrowBtns" ><img  class="arrow arrow-left" src="/assets/icons/play-button-left.png" alt="Button to drag the projects to the left"> </button>
+        <button class="arrowBtns arrow-left" ><img  class="arrow " src="/assets/icons/play-button-left.png" alt="Button to drag the projects to the left"> </button>
         <div class="window">
           <ul class="project-container">
-            <li><button aria-label="Project1" class="ProjectBtn"><img class="project" src="/assets/images/project1.png" alt="First Project"></button></li>
-            <li><button aria-label="Project2"  class="ProjectBtn"><img class="project" src="/assets/images/project2.png" alt="Second Project"></button></li>
-            <li><button aria-label=" Project3"  class="ProjectBtn"><img class="project" src="assets/images/project3.png" alt="Fourth Project"></button></li>
-            <li aria-hidden="true"><button aria-label=" Project4"  class="ProjectBtn"><img class="project" src="assets/images/project4.png" alt="Five Project"></button></li>
-            <li aria-hidden="true"><button aria-label=" Project5"  class="ProjectBtn"><img class="project" src="assets/images/project5.png" alt="Six Project"></button></li>
+            <li><button id="project1" aria-label="Project1" class="ProjectBtn project"><img class="project-img" src="/assets/images/project1.png" alt="First Project"></button></li>
+            <li><button  id="project2" aria-label="Project2"  class="ProjectBtn project"><img class="project-img" src="/assets/images/project2.png" alt="Second Project"></button></li>
+            <li><button  id="project3" aria-label=" Project3"  class="ProjectBtn project"><img class="project-img" src="assets/images/project3.png" alt="Fourth Project"></button></li>
+            <li aria-hidden="true"><button id="project4" aria-label=" Project4"  class="ProjectBtn project" tabindex="-1"><img class="project-img" src="assets/images/project4.png" alt="Five Project"></button></li>
+            <li aria-hidden="true"><button id="project5" aria-label=" Project5"  class="ProjectBtn project" tabindex="-1"><img class="project-img" src="assets/images/project5.png" alt="Six Project"></button></li>
           </ul>
         </div>
-        <button class="arrowBtns"><img class="arrow arrow-right" src="./assets/icons/play-button-right.png" alt="Button to drag the projects to the arrow-right"></button>
+        <button class="arrowBtns arrow-right"><img class="arrow " src="./assets/icons/play-button-right.png" alt="Button to drag the projects to the arrow-right"></button>
       </div>
     </section>
     </main>
@@ -95,8 +98,9 @@
     <div class="notification">The form was sended without errors :3</div>
     <div class="modal-container">
       <div class="modal">
-        Example of Project
-        <div class="modal-project-image"></div>
+        <h2 class="header">Example of Project</h2>
+        <img class="modal-project-image" src="./assets/images/project1.png"></img>
+        <button class="modal-button"> Exit </button>
       </div>
     </div>
 
