@@ -87,18 +87,21 @@
       <div class="header">Contact</div>
       <form  id="form-contact" class="form-container">
         <label for="form-contact">
-          <h3 class="message-input">Name</h3><input aria-label="Write Name"  type="text" /> <br />
-          <h3 class="message-input">E-mail</h3><input aria-label="Put E-Mail" type="text" /> <br />
-          <div class="message-input"> <h3>Message</h3><input aria-label="Send Message" type="text" /> <br /></div>
+          <h3 class="message-input">Name</h3><input id="name" aria-label="Write Name"  type="text" /> <br />
+          <span class="form-error"><em>!Write your name </em></span>
+          <h3 class="message-input">E-mail</h3><input id="email" aria-label="Put E-Mail" type="email"  /> <br />
+          <span class="form-error"><em>!Put a correct E-mail</em></span>
+          <div class="message-input"> <h3>Message</h3><input id="message" aria-label="Send Message" type="text"  /> <br /></div>
+          <span class="form-error"><em>!Write a message please </em></span>
         </label>
         <button aria-label="Send button" class="send-button">Send</button>
       </form>
     </footer>
 
-    <div class="notification">The form was sended without errors :3</div>
+    <div class="notification" aria-live="assertive"></div>
     <div class="modal-container">
       <div class="modal">
-        <h2 class="header">Example of Project</h2>
+        <h2 class="header" tabindex="0" id="modal-header">Example of Project</h2>
         <img class="modal-project-image" src="./assets/images/project1.png"></img>
         <button class="modal-button"> Exit </button>
       </div>

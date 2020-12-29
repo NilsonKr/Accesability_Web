@@ -1,8 +1,9 @@
 window.onload = () => {
     document.querySelector(".arrow-right").addEventListener("click", clickRight);
     document.querySelector(".arrow-left").addEventListener("click", clickLeft);
-    document.querySelector(".send-button").addEventListener("click", showNotification);
+    document.getElementById('form-contact').addEventListener('submit', e => validate(e))
     document.body.addEventListener("click", e => closeModal(e));
+    document.addEventListener("keyup", e => escKey(e))
   };
 
   const imgsModal = document.querySelectorAll('.project-img')
@@ -18,6 +19,8 @@ window.onload = () => {
   const project3 = document.querySelector('#project3') 
   const project4 = document.querySelector('#project4')
   const project5 = document.querySelector('#project5')
+  const errors = document.querySelectorAll('.form-error')
+
   /** Esta funcion se llama cuando la persona hace click en la fecha derecha del carousel para navegar a la derecha */
   function clickRight(){
     const container = document.querySelector('.window')
@@ -54,6 +57,8 @@ window.onload = () => {
   
   /** Esta funcion se llama cuando la persona hace click en el boton de enviar del formulario de contacto */
   function showNotification() {
+    document.querySelector('#form-contact').reset()
+    document.querySelector(".notification").innerHTML = 'The form was sended without errors :3'
     document.querySelector(".notification").style.display = "flex";
     setTimeout(function() {
       document.querySelector(".notification").style.display = "none";
@@ -62,12 +67,40 @@ window.onload = () => {
   
   /** Esta funcion se llama cuando la persona hace click en cualquier porjecto del carousel */
   function openModal(e) {
-
     const image = imgsModal[e].src
-    console.log(image)
-
     document.querySelector(".modal-container").style.display = "flex";
+    document.querySelector('#modal-header').focus()
     document.querySelector('.modal-project-image').setAttribute('src',`${image}`)
+  }
+  
+
+ //Funcion para validar los inputs
+ function  validate(e){
+  e.preventDefault()
+  const inputs = [e.target.name,e.target.email,e.target.message]
+  for(let i = 0; i < inputs.length; i++){
+      if(inputs[i].value === ''){
+        errors[i].style.display = 'block'
+        return
+      }else{
+        errors[i].style.display = 'none'
+      }
+  }
+  inputs.find(inp => {
+    if(inp.value === ''){
+      return
+    }
+    showNotification()
+  })
+
+ }
+
+  //Funcion para cerrar el modal con la key Esc
+
+  function escKey(e){
+    if(e.keyCode === 27){
+      closeModal(e)
+    }
   }
   
   /** Esta funcion se llama para cerrar el modal */
